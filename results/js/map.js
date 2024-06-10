@@ -19,15 +19,14 @@ const initMap = (myJson) => {
   mymap = L.map("my_map").setView(center, 10);
 
   //initialize tiles (there are many options):
-  L.tileLayer.provider("Stamen.TonerLite").addTo(mymap);
-  // L.tileLayer.provider('Stamen.Watercolor').addTo(mymap);
-  // L.tileLayer.provider('Stamen.Terrain').addTo(mymap);
-  // L.tileLayer.provider('Stamen.TerrainBackground').addTo(mymap);
-  // L.tileLayer.provider('Stamen.Toner').addTo(mymap);
-  // L.tileLayer.provider('Stamen.TonerBackground').addTo(mymap);
-  // L.tileLayer.provider('Stamen.TonerHybrid').addTo(mymap);
-  // L.tileLayer.provider('Stamen.TonerLines').addTo(mymap);
-  // L.tileLayer.provider('Stamen.TonerLabels').addTo(mymap);
+  L.tileLayer.provider("Stadia.StamenTonerLite").addTo(mymap);
+  // L.tileLayer.provider("Stadia.StamenWatercolor").addTo(mymap);
+  // L.tileLayer.provider('Stadia.StamenTerrain').addTo(mymap);
+  // L.tileLayer.provider("Stadia.StamenTerrainBackground").addTo(mymap);
+  // L.tileLayer.provider("Stadia.StamenToner").addTo(mymap);
+  // L.tileLayer.provider('Stadia.StamenTonerBackground').addTo(mymap);
+  // L.tileLayer.provider("Stadia.StamenTonerLines").addTo(mymap);
+  // L.tileLayer.provider("Stadia.StamenTonerLabels").addTo(mymap);
   // https://www.digitalocean.com/community/tutorials/for-loops-for-of-loops-and-for-in-loops-in-javascript#for-of-loop
   for (const business of myJson.businesses) {
     // make the marker:
